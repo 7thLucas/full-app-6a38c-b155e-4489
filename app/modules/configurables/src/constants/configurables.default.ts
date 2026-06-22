@@ -59,11 +59,18 @@ export type TFont = {
   textFont: string;
 };
 
+export type THeadline = {
+  part1: string;
+  part2: string;
+  part3: string;
+};
+
 export type TDefaultConfigurableData = {
   appName: string;
   logoUrl: string;
   brandColor: TBrandColor;
   font: TFont;
+  headline: THeadline;
   // Mirror new schema fields here. Example:
   //   maxItemsPerPage?: number;
   //   enableNotifications?: boolean;
@@ -71,37 +78,37 @@ export type TDefaultConfigurableData = {
 };
 
 export const defaultConfigurablesData: TDefaultConfigurableData = {
-  appName: "My App",
+  appName: "We Love Meepo x QuantumByte",
   logoUrl: "",
   brandColor: {
     // Base
-    background:        "#ffffff",
-    foreground:        "#09090b",
+    background:        "#09090b",
+    foreground:        "#fafafa",
     // Card
-    card:              "#ffffff",
-    cardForeground:    "#09090b",
+    card:              "#18181b",
+    cardForeground:    "#fafafa",
     // Popover
-    popover:           "#ffffff",
-    popoverForeground: "#09090b",
+    popover:           "#09090b",
+    popoverForeground: "#fafafa",
     // Primary
-    primary:           "#2563eb",
+    primary:           "#7c3aed",
     primaryForeground: "#ffffff",
     // Secondary
-    secondary:           "#f4f4f5",
-    secondaryForeground: "#18181b",
+    secondary:           "#18181b",
+    secondaryForeground: "#fafafa",
     // Muted
-    muted:           "#f4f4f5",
-    mutedForeground: "#71717a",
+    muted:           "#27272a",
+    mutedForeground: "#a1a1aa",
     // Accent
-    accent:           "#f4f4f5",
-    accentForeground: "#18181b",
+    accent:           "#7c3aed",
+    accentForeground: "#ffffff",
     // Destructive
     destructive:           "#ef4444",
-    destructiveForeground: "#fafafa",
+    destructiveForeground: "#ffffff",
     // Border / Input / Ring
-    border: "#e4e4e7",
-    input:  "#e4e4e7",
-    ring:   "#2563eb",
+    border: "#27272a",
+    input:  "#27272a",
+    ring:   "#7c3aed",
     // Charts
     chart1: "#f97316",
     chart2: "#0d9488",
@@ -109,20 +116,25 @@ export const defaultConfigurablesData: TDefaultConfigurableData = {
     chart4: "#d4a017",
     chart5: "#ea580c",
     // Navbar
-    navbarBackground: "#ffffff",
+    navbarBackground: "#09090b",
     // Sidebar
-    sidebarBackground:        "#fafafa",
-    sidebarForeground:        "#3f3f46",
-    sidebarPrimary:           "#2563eb",
+    sidebarBackground:        "#09090b",
+    sidebarForeground:        "#fafafa",
+    sidebarPrimary:           "#7c3aed",
     sidebarPrimaryForeground: "#ffffff",
-    sidebarAccent:            "#f4f4f5",
-    sidebarAccentForeground:  "#18181b",
-    sidebarBorder:            "#e4e4e7",
-    sidebarRing:              "#2563eb",
+    sidebarAccent:            "#27272a",
+    sidebarAccentForeground:  "#fafafa",
+    sidebarBorder:            "#27272a",
+    sidebarRing:              "#7c3aed",
   },
   font: {
-    headingFont: "Plus Jakarta Sans",
+    headingFont: "Space Grotesk",
     textFont: "Inter",
+  },
+  headline: {
+    part1: "We Love",
+    part2: "Meepo",
+    part3: "x QuantumByte",
   },
   // ─────────────────────────────────────────────────────────────────────
   // Add new field defaults here. See RULES.md §5 for per-type shape.

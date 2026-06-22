@@ -100,6 +100,18 @@ export const configurableSchemas: ConfigurableSchemas = {
     },
 
     {
+      fieldName: "headline",
+      type: "object",
+      required: true,
+      label: "Headline",
+      fields: [
+        { fieldName: "part1", type: "string", required: true, label: "Part 1 (e.g. We Love)" },
+        { fieldName: "part2", type: "string", required: true, label: "Part 2 — Accent (e.g. Meepo)" },
+        { fieldName: "part3", type: "string", required: true, label: "Part 3 (e.g. x QuantumByte)" },
+      ],
+    },
+
+    {
       fieldName: "font",
       type: "object",
       required: true,

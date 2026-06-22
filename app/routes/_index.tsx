@@ -1,21 +1,31 @@
+import { useConfigurables } from "~/modules/configurables";
+
 export default function IndexPage() {
+  const { config, loading } = useConfigurables();
+
+  const part1 = loading ? "" : (config?.headline?.part1 ?? "We Love");
+  const part2 = loading ? "" : (config?.headline?.part2 ?? "Meepo");
+  const part3 = loading ? "" : (config?.headline?.part3 ?? "x QuantumByte");
+  const appName = loading ? "" : (config?.appName ?? "We Love Meepo x QuantumByte");
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-white text-black font-sans text-center">
-      <div className="max-w-2xl space-y-6">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-          Welcome to QuantumByte app
-        </h1>
-
-        <p className="text-base sm:text-lg md:text-xl text-stone-700 leading-relaxed">
-          If you seeing this view that mean you are seeing QuantumByte template base app.
-        </p>
-
-        <div className="pt-4">
-          <p className="text-lg sm:text-xl md:text-2xl font-semibold text-black border border-black px-6 py-4 inline-block">
-            Ask the agent to build your idea now!!!
-          </p>
-        </div>
-      </div>
-    </div>
+    <main
+      className="flex min-h-screen w-full items-center justify-center bg-background"
+      aria-label={appName}
+    >
+      <h1
+        className="text-center font-heading font-black leading-tight tracking-tight px-4"
+        style={{
+          fontSize: "clamp(3rem, 10vw, 8rem)",
+          opacity: loading ? 0 : 1,
+          transition: "opacity 0.6s ease",
+          fontFamily: "var(--font-heading, 'Space Grotesk', sans-serif)",
+        }}
+      >
+        <span className="text-foreground">{part1} </span>
+        <span className="text-primary">{part2}</span>
+        <span className="text-muted-foreground"> {part3}</span>
+      </h1>
+    </main>
   );
 }
