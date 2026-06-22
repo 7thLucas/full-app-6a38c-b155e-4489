@@ -1,0 +1,33 @@
+<style>
+.mode-landscape .sl-layout { flex-direction: row; }
+.mode-portrait .sl-layout { flex-direction: column; }
+.mode-landscape .sl-content { width: 55%; }
+.mode-landscape .sl-visual { width: 45%; }
+.mode-portrait .sl-content { width: 100%; }
+.mode-portrait .sl-visual { width: 100%; height: 40%; }
+</style>
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-layout flex h-full">
+    <div class="sl-content flex flex-col justify-between p-12">
+      <div>
+        <span class="text-xs font-semibold tracking-widest text-slate-400 uppercase">Celebration Page</span>
+        <h1 class="text-5xl font-black text-slate-900 leading-tight mt-4">
+          We Love<br>
+          <span class="text-violet-600">Meepo</span><br>
+          <span class="text-slate-400">× QuantumByte</span>
+        </h1>
+        <p class="mt-6 text-lg text-slate-600 font-light max-w-xs">A single declaration. One phrase. Zero noise.</p>
+      </div>
+      <div>
+        <data-attribution />
+      </div>
+    </div>
+    <div class="sl-visual flex-1 overflow-hidden">
+      <img
+        src="https://api-stag.qb-deck.quantumbyte.ai/common/image-generation?prompt=abstract%20celebration%20bold%20editorial%20typography%20dark%20violet%20gradient%20minimalist%20art%20premium"
+        class="w-full h-full object-cover"
+        alt="Cover visual"
+      />
+    </div>
+  </div>
+</section>
