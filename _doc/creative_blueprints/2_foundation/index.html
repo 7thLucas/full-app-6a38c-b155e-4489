@@ -1,0 +1,31 @@
+<style>
+.mode-landscape .sl-layout { flex-direction: row; }
+.mode-portrait .sl-layout { flex-direction: column; }
+.mode-landscape .sl-narrative { width: 55%; }
+.mode-landscape .sl-visual { width: 45%; }
+.mode-portrait .sl-narrative { width: 100%; }
+.mode-portrait .sl-visual { display: none; }
+</style>
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-layout flex h-full">
+    <div class="sl-narrative p-12 flex flex-col justify-center gap-10">
+      <div>
+        <span class="text-xs font-semibold tracking-widest text-violet-500 uppercase">The Problem</span>
+        <h2 class="text-3xl font-black text-slate-900 mt-3 leading-snug">The internet is full of noise.<br>Pure celebration is rare.</h2>
+        <p class="mt-4 text-slate-600">Most pages try to do too much — sell, convert, redirect. A simple, honest moment of joy gets buried under menus, banners, and calls to action.</p>
+      </div>
+      <div class="border-t border-slate-100 pt-8">
+        <span class="text-xs font-semibold tracking-widest text-slate-400 uppercase">The Solution</span>
+        <h2 class="text-3xl font-black text-slate-900 mt-3 leading-snug">One page. One phrase.<br>Zero compromise.</h2>
+        <p class="mt-4 text-slate-600">A focused declaration — "We Love Meepo × QuantumByte" — delivered with no distractions, no friction, no clutter. The message is the entire product.</p>
+      </div>
+    </div>
+    <div class="sl-visual flex-1 overflow-hidden">
+      <img
+        src="https://api-stag.qb-deck.quantumbyte.ai/common/image-generation?prompt=minimalist%20clean%20white%20space%20single%20bold%20typographic%20word%20editorial%20calm%20contrast%20light"
+        class="w-full h-full object-cover"
+        alt="Foundation visual"
+      />
+    </div>
+  </div>
+</section>
